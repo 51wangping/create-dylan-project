@@ -9,6 +9,8 @@ const path = require('path');
 const ejs = require('ejs');
 const ora = require('ora');
 
+let registry = 'https://registry.npmjs.org/'
+
 
 const logger = {
   info(tag, message) {
@@ -114,7 +116,24 @@ yargs
       spinner.start();
 
       // 模板地址 TODO: 支持多模板 根据answers.template 匹配
-      templateModulePath = path.resolve(__dirname, '../../react-pc-template');
+      // templateModulePath = path.resolve(__dirname, '../../react-pc-template');
+       try {
+          await execAsync(
+          `npm install react-pc-template --registry ${registry} --no-save`,
+          {
+            cwd: appDir,
+          }
+        );
+        spinner.succeed('获取模板完成');
+        await sleep(500);
+
+        templateModulePath = path.resolve(
+          appDir,
+          `./node_modules/@medlinker/create-app-template-${result.template}-${result.language}`
+        );
+       } catch (error) {
+          logger.error('错误', '获取模板失败\n' + error)
+       }
 
       const templateInfo = require(path.join(templateModulePath, 'template.json'));
       const templatePah = path.join(templateModulePath, 'template');
