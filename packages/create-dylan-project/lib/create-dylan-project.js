@@ -129,7 +129,7 @@ yargs
 
         templateModulePath = path.resolve(
           projectName,
-          `./node_modules/@medlinker/create-app-template-${result.template}-${result.language}`
+          `./node_modules/react-pc-template`
         );
        } catch (error) {
           logger.error('错误', '获取模板失败\n' + error)
