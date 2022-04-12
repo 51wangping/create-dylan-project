@@ -1,19 +1,28 @@
 {
-  "name": "react-pc-template",
+  "name": "@dylan/react-pc-template",
   "version": "0.0.1",
-  "description": "> TODO: description",
+  "description": "这个一个基于react PC版本项目模板",
   "author": "Dylan <253423846@qq.com>",
   "homepage": "",
-  "license": "ISC",
   "main": "lib/react-pc-template.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
+  "license": "ISC",
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/Dylan0/react-pc-template.git"
+  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
-  }
+  },
+  "gitHead": "2503df51d9b5c94ebb222e0aafa2bff515757e7f"
 }

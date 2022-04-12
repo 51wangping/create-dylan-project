@@ -1,0 +1,54 @@
+{
+  "package": {
+    "name": "react-pc-template",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "npm run dev:dev",
+      "dev:dev": "cross-env CURRENT_ENV=dev webpack-dev-server --config ./webpack/webpack.dev.conf.js",
+      "dev:prod": "cross-env CURRENT_ENV=prod webpack-dev-server --config ./webpack/webpack.dev.conf.js",
+      "build:dev": "cross-env CURRENT_ENV=dev webpack --config ./webpack/webpack.prod.conf.js",
+      "build:prod": "cross-env CURRENT_ENV=prod webpack --config ./webpack/webpack.prod.conf.js"
+    },
+    "keywords": [],
+    "author": "51wangping",
+    "license": "MIT",
+    "devDependencies": {
+      "@babel/core": "^7.15.4",
+      "@babel/polyfill": "^7.12.1",
+      "@babel/preset-env": "^7.15.4",
+      "@babel/preset-react": "^7.14.5",
+      "@types/react": "^17.0.38",
+      "@types/react-dom": "^17.0.11",
+      "autoprefixer": "^10.3.4",
+      "babel-loader": "^8.2.2",
+      "classnames": "^2.3.1",
+      "clean-webpack-plugin": "^4.0.0",
+      "css-loader": "^6.2.0",
+      "css-minimizer-webpack-plugin": "^3.0.2",
+      "dotenv-webpack": "^7.0.3",
+      "friendly-errors-webpack-plugin": "^1.7.0",
+      "html-webpack-plugin": "^5.3.2",
+      "less": "^4.1.1",
+      "less-loader": "^10.0.1",
+      "mini-css-extract-plugin": "^2.3.0",
+      "postcss-loader": "^6.1.1",
+      "style-loader": "^3.2.1",
+      "ts-loader": "^9.2.6",
+      "typescript": "^4.5.4",
+      "webpack": "^5.51.2",
+      "webpack-cli": "^4.8.0",
+      "webpack-dev-server": "^4.1.0",
+      "webpack-merge": "^5.8.0",
+      "webpack-node-externals": "^3.0.0"
+    },
+    "dependencies": {
+      "cross-env": "^7.0.3",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "redux": "^4.1.1",
+      "webpackbar": "^5.0.2"
+    }
+  }
+}
