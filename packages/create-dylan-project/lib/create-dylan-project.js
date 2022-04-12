@@ -121,14 +121,14 @@ yargs
           await execAsync(
           `npm install react-pc-template --registry ${registry} --no-save`,
           {
-            cwd: appDir,
+            cwd: projectName,
           }
         );
         spinner.succeed('获取模板完成');
         await sleep(500);
 
         templateModulePath = path.resolve(
-          appDir,
+          projectName,
           `./node_modules/@medlinker/create-app-template-${result.template}-${result.language}`
         );
        } catch (error) {
