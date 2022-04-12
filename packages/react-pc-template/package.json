@@ -1,5 +1,5 @@
 {
-  "name": "@dylan/react-pc-template",
+  "name": "react-pc-template",
   "version": "0.0.1",
   "description": "这个一个基于react PC版本项目模板",
   "author": "Dylan <253423846@qq.com>",
@@ -13,10 +13,6 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "repository": {
     "type": "git",
     "url": "https://gitee.com/Dylan0/react-pc-template.git"

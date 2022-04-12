@@ -1,5 +1,5 @@
 {
-  "name": "@dylan/create-dylan-project",
+  "name": "create-dylan-project",
   "version": "0.0.1",
   "description": "创建项目脚手架",
   "author": "Dylan <253423846@qq.com>",
@@ -16,10 +16,6 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npm.org/"
-  },
   "repository": {
     "type": "git",
     "url": "https://gitee.com/Dylan0/create-dylan-project.git"
