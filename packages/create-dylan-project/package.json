@@ -1,0 +1,19 @@
+{
+  "name": "create-dylan-project",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "Dylan <253423846@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/create-dylan-project.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}

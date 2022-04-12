@@ -1,0 +1,20 @@
+0 silly argv {
+0 silly argv   _: [ 'create' ],
+0 silly argv   lernaVersion: '4.0.0',
+0 silly argv   '$0': 'lerna',
+0 silly argv   name: 'react-pc-template'
+0 silly argv }
+1 notice cli v4.0.0
+2 verbose rootPath /Users/bruce/Desktop/create-dylan-project
+3 info versioning independent
+4 warn ENOREMOTE No git remote found, skipping repository property
+5 error Error: canceled
+5 error     at Interface.<anonymous> (/Users/bruce/.nvm/versions/node/v16.13.0/lib/node_modules/lerna/node_modules/read/lib/read.js:66:13)
+5 error     at Interface.emit (node:events:390:28)
+5 error     at Interface._ttyWrite (node:readline:1081:16)
+5 error     at ReadStream.onkeypress (node:readline:288:10)
+5 error     at ReadStream.emit (node:events:390:28)
+5 error     at emitKeys (node:internal/readline/utils:358:14)
+5 error     at emitKeys.next (<anonymous>)
+5 error     at ReadStream.onData (node:internal/readline/emitKeypressEvents:61:36)
+5 error     at ReadStream.emit (node:events:390:28)
