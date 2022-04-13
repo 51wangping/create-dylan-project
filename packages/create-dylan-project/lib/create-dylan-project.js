@@ -9,9 +9,6 @@ const path = require('path');
 const ejs = require('ejs');
 const ora = require('ora');
 
-let registry = 'https://registry.npmjs.org/'
-
-
 const logger = {
   info(tag, message) {
     return console.log(chalk`{magenta ${tag}:} ${message}`);
@@ -22,16 +19,16 @@ const logger = {
   },
 };
 
-const execAsync = (command, options, isLog = false) => {
+const execAsync = (command, options, slient = false) => {
   return new Promise((resolve, reject) => {
     const childProcess = exec(command, options);
 
     childProcess.stdout.on('message', (message) => {
-      isLog && console.log(message.toString());
+      slient && console.log(message.toString());
     });
 
     childProcess.stdout.on('error', (message) => {
-      isLog && console.log(message.toString());
+      slient && console.log(message.toString());
     });
 
     childProcess.on('error', (err) => {
@@ -40,7 +37,7 @@ const execAsync = (command, options, isLog = false) => {
 
     childProcess.on('exit', (code) => {
       if (code === 0) {
-        resolve(0);
+        resolve();
       }
     });
   });
@@ -77,7 +74,7 @@ yargs
         return;
       }
 
-      console.log(`> 开始创建项目 ${chalk.yellow(projectName)}，请根据提s示完成项目配置`);
+      console.log(`> 开始创建项目 ${chalk.yellow(projectName)}，请根据提示完成项目配置`);
 
       const answers = await inquirer.prompt([
         {
@@ -116,24 +113,18 @@ yargs
       spinner.start();
 
       // 模板地址 TODO: 支持多模板 根据answers.template 匹配
-      // templateModulePath = path.resolve(__dirname, '../../react-pc-template');
-       try {
-          await execAsync(
-          `npm install react-pc-template --registry ${registry} --no-save`,
-          {
-            cwd: projectName,
-          }
+      if (process.env.NODE_ENV === 'debug') {
+        templateModulePath = path.resolve(__dirname, '../../react-pc-template');
+      } else {
+        await execAsync(
+          `npm install  react-pc-template`
         );
         spinner.succeed('获取模板完成');
         await sleep(500);
-
-        templateModulePath = path.resolve(
-          projectName,
-          `./node_modules/react-pc-template`
-        );
-       } catch (error) {
-          logger.error('错误', '获取模板失败\n' + error)
-       }
+        templateModulePath = path.resolve(__dirname,`./node_modules/react-pc-template`);
+        logger.info('模板地址', templateModulePath);
+        // templateModulePath = path.resolve(__dirname, '../../react-pc-template');
+      }
 
       const templateInfo = require(path.join(templateModulePath, 'template.json'));
       const templatePah = path.join(templateModulePath, 'template');
@@ -205,7 +196,7 @@ yargs
       console.log(`> 安装依赖模块`);
       console.log('');
 
-      execSync('npm install', {
+      execSync('yarn ', {
         cwd: projectName,
         stdio: 'inherit',
       });
