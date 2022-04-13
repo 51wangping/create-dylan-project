@@ -108,6 +108,19 @@ yargs
           ]
         }
       ]);
+      // 写一个默认，让依赖能装到当前文件夹
+      fs.writeFileSync(
+        path.join(appDir, `package.json`),
+        JSON.stringify(
+          {
+            name: projectName,
+            description: answers.description,
+            version: '0.1.0',
+          },
+          null,
+          2
+        )
+      );
 
       const spinner = ora('正在获取模板...\n');
       spinner.start();
