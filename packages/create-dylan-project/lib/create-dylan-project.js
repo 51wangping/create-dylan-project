@@ -150,10 +150,6 @@ yargs
       packageJSON.name = projectName;
       packageJSON.description = answers.description;
 
-      console.log('');
-      fs.ensureDirSync(projectName);
-
-
       logger.info('复制文件',"package.json");
       fs.writeFileSync(path.join(projectName, 'package.json'), JSON.stringify(packageJSON, null, 2));
 
@@ -184,7 +180,7 @@ yargs
           ) {
             const fileContent = ejs.render(fs.readFileSync(fullFilePath).toString(), result);
             fs.writeFileSync(path.join(projectName, relativePath), fileContent);
-            return;ss
+            return;
           } else {
             fs.copyFileSync(fullFilePath, path.join(projectName, relativePath));
           }
