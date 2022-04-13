@@ -109,6 +109,8 @@ yargs
         }
       ]);
       // 写一个默认，让依赖能装到当前文件夹
+      fs.ensureDirSync(projectPath);
+
       fs.writeFileSync(
         path.join(projectPath, `package.json`),
         JSON.stringify(
