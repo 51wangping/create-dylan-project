@@ -201,6 +201,16 @@ yargs
           cwd: projectName,
         });
 
+        // 创建.gitignore
+        fs.writeFileSync(
+        path.join(projectPath, `.gitignore`),
+        JSON.stringify(
+            'node_modules/\n dist/\n .DS_Store\n yarn.lock\n package-lock.json\n .env\n',
+            null,
+            2
+          )
+        );
+
         logger.info('GIT', '初始化仓库完成');
       } catch (e) {
         gitFail = true;
