@@ -153,7 +153,7 @@ yargs
       logger.info('复制文件',"package.json");
       fs.writeFileSync(path.join(projectName, 'package.json'), JSON.stringify(packageJSON, null, 2));
       logger.info('复制文件', `.gitignore`);
-      fs.writeFileSync(path.join(appDir, `.gitignore`), require('./gitignore'));
+      fs.writeFileSync(path.join(projectName, `.gitignore`), require('./gitignore'));
 
       // 复制文件
       const copyFile = (dir) => {
