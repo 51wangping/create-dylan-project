@@ -12,7 +12,7 @@
       "build:prod": "cross-env CURRENT_ENV=prod webpack --config ./webpack/webpack.prod.conf.js"
     },
     "keywords": [],
-    "author": "51wangping",
+    "author": "",
     "license": "MIT",
     "devDependencies": {
       "@babel/core": "^7.15.4",

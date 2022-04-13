@@ -152,6 +152,8 @@ yargs
 
       logger.info('复制文件',"package.json");
       fs.writeFileSync(path.join(projectName, 'package.json'), JSON.stringify(packageJSON, null, 2));
+      logger.info('复制文件', `.gitignore`);
+      fs.writeFileSync(path.join(appDir, `.gitignore`), require('./gitignore'));
 
       // 复制文件
       const copyFile = (dir) => {
@@ -196,16 +198,6 @@ yargs
         execSync('git init', {
           cwd: projectName,
         });
-
-        // 创建.gitignore
-        fs.writeFileSync(
-        path.join(projectPath, `.gitignore`),
-        JSON.stringify(
-            'node_modules/\n dist/\n .DS_Store\n yarn.lock\n package-lock.json\n .env\n',
-            null,
-            2
-          )
-        );
 
         logger.info('GIT', '初始化仓库完成');
       } catch (e) {
