@@ -110,7 +110,7 @@ yargs
       ]);
       // 写一个默认，让依赖能装到当前文件夹
       fs.writeFileSync(
-        path.join(appDir, `package.json`),
+        path.join(projectPath, `package.json`),
         JSON.stringify(
           {
             name: projectName,
