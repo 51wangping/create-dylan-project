@@ -117,11 +117,14 @@ yargs
         templateModulePath = path.resolve(__dirname, '../../react-pc-template');
       } else {
         await execAsync(
-          `npm install  react-pc-template`
+          `npm install  react-pc-template --no-save`,
+          {
+            cwd: projectPath
+          }
         );
         spinner.succeed('获取模板完成');
         await sleep(500);
-        templateModulePath = path.resolve(process.cwd(),`./node_modules/react-pc-template`);
+        templateModulePath = path.resolve(projectPath,`./node_modules/react-pc-template`);
         logger.info('模板地址', templateModulePath);
         // templateModulePath = path.resolve(__dirname, '../../react-pc-template');
       }
