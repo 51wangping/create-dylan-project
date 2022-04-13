@@ -220,10 +220,10 @@ yargs
        if (!gitFail) {
         try {
           execSync('git add .', {
-            cwd: appDir,
+            cwd: projectName,
           });
           execSync('git commit -m "initial project" --no-verify', {
-            cwd: appDir,
+            cwd: projectName,
           });
         } catch (e) {
           //
