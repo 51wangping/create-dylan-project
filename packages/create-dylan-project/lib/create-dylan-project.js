@@ -19,16 +19,16 @@ const logger = {
   },
 };
 
-const execAsync = (command, options, slient = false) => {
+const execAsync = (command, options, silent = false) => {
   return new Promise((resolve, reject) => {
     const childProcess = exec(command, options);
 
     childProcess.stdout.on('message', (message) => {
-      slient && console.log(message.toString());
+      silent && console.log(message.toString());
     });
 
     childProcess.stdout.on('error', (message) => {
-      slient && console.log(message.toString());
+      silent && console.log(message.toString());
     });
 
     childProcess.on('error', (err) => {
