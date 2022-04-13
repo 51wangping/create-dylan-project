@@ -11,7 +11,8 @@
   },
   "license": "ISC",
   "files": [
-    "lib"
+    "template/**/*",
+    "template.json"
   ],
   "repository": {
     "type": "git",
