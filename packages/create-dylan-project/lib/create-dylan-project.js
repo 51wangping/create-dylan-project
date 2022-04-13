@@ -214,7 +214,7 @@ yargs
       console.log(`> 安装依赖模块`);
       console.log('');
 
-      execSync('yarn ', {
+      execSync('npm i ', {
         cwd: projectName,
         stdio: 'inherit',
       });
