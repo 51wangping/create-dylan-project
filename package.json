@@ -4,6 +4,13 @@
   "scripts": {
     "publish": "lerna publish"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/51wangping/create-dylan-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/51wangping/create-dylan-project/issues"
+  },
   "devDependencies": {
     "lerna": "^4.0.0"
   }

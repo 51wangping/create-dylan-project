@@ -8,7 +8,7 @@
   ],
   "author": "Dylan <253423846@qq.com>",
   "homepage": "",
-  "license": "ISC",
+  "license": "MIT",
   "main": "index.js",
   "directories": {
     "lib": "lib",
@@ -20,7 +20,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/Dylan0/create-dylan-project.git"
+    "url": "https://github.com/51wangping/create-dylan-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/51wangping/create-dylan-project/issues"
   },
   "scripts": {
     "build": "webpack",

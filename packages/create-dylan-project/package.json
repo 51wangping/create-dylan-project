@@ -8,7 +8,7 @@
   "bin": {
     "create-dylan-project": "lib/create-dylan-project.js"
   },
-  "license": "ISC",
+  "license": "MIT",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -18,7 +18,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/Dylan0/create-dylan-project.git"
+    "url": "https://github.com/51wangping/create-dylan-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/51wangping/create-dylan-project/issues"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"

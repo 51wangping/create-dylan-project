@@ -9,14 +9,17 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "license": "ISC",
+  "license": "MIT",
   "files": [
     "template/**/*",
     "template.json"
   ],
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/Dylan0/react-pc-template.git"
+    "url": "https://github.com/51wangping/create-dylan-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/51wangping/create-dylan-project/issues"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
