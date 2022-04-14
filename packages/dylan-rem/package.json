@@ -1,6 +1,6 @@
 {
   "name": "dylan-rem",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "专为移动端设置rem和px 切换",
   "keywords": [
     "rem2px",
