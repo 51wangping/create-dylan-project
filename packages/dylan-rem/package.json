@@ -14,6 +14,7 @@
     "lib": "lib",
     "test": "__tests__"
   },
+  "types": "index.d.ts",
   "files": [
     "dist",
     "index.d.ts"
