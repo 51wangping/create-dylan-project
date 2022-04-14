@@ -19,6 +19,11 @@ const logger = {
   },
 };
 
+let answersTempList = {
+  "react-mobile" : "react-mobile-template",
+  "react-pc" : "react-pc-template",
+};
+
 const execAsync = (command, options, silent = false) => {
   return new Promise((resolve, reject) => {
     const childProcess = exec(command, options);
@@ -132,14 +137,14 @@ yargs
         templateModulePath = path.resolve(__dirname, '../../react-pc-template');
       } else {
         await execAsync(
-          `npm install  react-pc-template --no-save`,
+          `npm install  ${answersTempList[answers.template] || "react-mobile-template"} --no-save`,
           {
             cwd: projectPath
           }
         );
         spinner.succeed('获取模板完成');
         await sleep(500);
-        templateModulePath = path.resolve(projectPath,`./node_modules/react-pc-template`);
+        templateModulePath = path.resolve(projectPath,`./node_modules/${answersTempList[answers.template] || "react-mobile-template"}`);
         logger.info('模板地址', templateModulePath);
         // templateModulePath = path.resolve(__dirname, '../../react-pc-template');
       }
