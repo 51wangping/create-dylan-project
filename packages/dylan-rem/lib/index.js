@@ -35,6 +35,7 @@ const rem2Px = (rem, addUnit = false) => {
   return value;
 };
 
+// maxRatio: 最大比例
 const init = ({ designWidth = 375, rootValue = 100, maxRatio = 2 }) => {
   DESIGN_WIDTH = designWidth;
   REM_BASE = rootValue;

@@ -41,13 +41,11 @@
       "webpack-cli": "^4.8.0",
       "webpack-dev-server": "^4.1.0",
       "webpack-merge": "^5.8.0",
-      "webpack-node-externals": "^3.0.0",
-      "postcss-pxtorem": "^6.0.0"
+      "webpack-node-externals": "^3.0.0"
     },
     "dependencies": {
       "cross-env": "^7.0.3",
       "react": "^17.0.2",
-      "dylan-rem": "^1.0.3",
       "react-dom": "^17.0.2",
       "redux": "^4.1.1",
       "webpackbar": "^5.0.2"
