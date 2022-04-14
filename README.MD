@@ -62,7 +62,7 @@ create-dylan-project init my-app
 
 ```
 
-它将在当前文件夹中创建一个名为“我的应用”的目录
+它将在当前文件夹中创建一个名为“my-app”的目录
 
 ```
 my-app
