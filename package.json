@@ -5,7 +5,8 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "install": "lerna bootstrap"
   },
   "repository": {
     "type": "git",
@@ -15,11 +16,11 @@
     "url": "https://github.com/51wangping/create-dylan-project/issues"
   },
   "devDependencies": {
-    "lerna": "^4.0.0",
-    "husky": "^4.2.5",
-    "prettier": "^2.2.1",
     "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4"
+    "@commitlint/config-conventional": "^8.3.4",
+    "husky": "^4.2.5",
+    "lerna": "^4.0.0",
+    "prettier": "^2.2.1"
   },
   "husky": {
     "hooks": {
