@@ -11,7 +11,7 @@ jobs:
         if: github.event.ref_type == 'tag'
         uses: actions-cool/release-helper@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACCESS_TOKEN }}
           trigger: 'tag'
           changelogs: 'CHANGELOG.en-US.md, CHANGELOG.zh-CN.md'
           branch: 'master'
