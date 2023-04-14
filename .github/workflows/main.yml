@@ -1,0 +1,17 @@
+name: 🤖 Make Release
+
+on:
+  create
+
+jobs:
+  release-helper:
+    runs-on: ubuntu-latest
+    steps:
+      - name: make release
+        if: github.event.ref_type == 'tag'
+        uses: actions-cool/release-helper@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          trigger: 'tag'
+          changelogs: 'CHANGELOG.en-US.md, CHANGELOG.zh-CN.md'
+          branch: 'master'
