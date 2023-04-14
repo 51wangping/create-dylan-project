@@ -1,7 +1,5 @@
 # create-dylan-project  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/51wangping/create-dylan-project/pulls)
 
-<img alt="Logo" align="right" src="https://create-react-app.dev/img/logo.svg" width="20%" />
-
 通过脚本创建 React 项目 无需任何配置
 
 - [创建应用程序](#creating-an-app) – 如何创建一个新的程序.
@@ -24,7 +22,7 @@ npm start
 
 _([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) 附带npm 5.2+及更高版本，请参阅[旧版npm的说明](https://gist.github.com/gaearon/4064d3c23a77c74a3614c498a8bb1c5f))_
 
-然后打开 [http://localhost:3000/](http://localhost:3000/) 查看你的应用程序.<br>
+然后打开 [http://localhost:8000/](http://localhost:8000/) 查看你的应用程序.<br>
 如果你项目部署生产环境时，可以使用
 `npm run build`.
 
@@ -98,7 +96,7 @@ cd my-app
 ### `npm start` or `yarn start`
 
 以开发模式运行应用程序<br>
-打开 [http://localhost:3000](http://localhost:3000) to view it in the browser.
+打开 [http://localhost:8000](http://localhost:8000) to view it in the browser.
 
 如何你更改代码项目将重新加载.<br>
 你可以在控制台看到构建错误和eslint警告
