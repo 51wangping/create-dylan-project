@@ -1,7 +1,7 @@
 {
   "name": "react-pc-template",
   "version": "0.0.5",
-  "description": "这个一个基于react mobile 版本项目模板",
+  "description": "这个一个基于react pc ts 版本项目模板",
   "author": "Dylan <253423846@qq.com>",
   "homepage": "",
   "main": "lib/react-pc-template.js",
