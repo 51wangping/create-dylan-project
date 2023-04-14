@@ -23,5 +23,8 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@types/react-dom": "^18.0.11"
   }
 }

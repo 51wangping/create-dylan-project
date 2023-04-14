@@ -20,8 +20,8 @@
       "@babel/preset-env": "^7.15.4",
       "@babel/preset-react": "^7.14.5",
       "@types/react": "^17.0.38",
-      "@types/react-dom": "^17.0.11",
       "autoprefixer": "^10.3.4",
+      "postcss-pxtorem":"@6.0.0",
       "babel-loader": "^8.2.2",
       "classnames": "^2.3.1",
       "clean-webpack-plugin": "^4.0.0",
@@ -48,7 +48,8 @@
       "react": "^17.0.2",
       "react-dom": "^17.0.2",
       "redux": "^4.1.1",
-      "webpackbar": "^5.0.2"
+      "webpackbar": "^5.0.2",
+      "@types/react-dom": "^17.0.11"
     }
   }
 }
